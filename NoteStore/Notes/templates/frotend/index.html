@@ -1,0 +1,78 @@
+
+{% extends 'base.html' %}
+{% block body %}
+<div class="container-fluid banner">
+	<div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-md">
+				<div class="navbar-brand">JuST NoTE!!</div>
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#">HOME</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'Notes:Register' %}">REGISTER</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#about">ABOUT</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'Notes:login' %}">LOGIN</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="col-md-8 offset-md-2 info">
+			<h1 class="text-center">JuST NoTE!!</h1>
+			<p class="text-center">
+				We are excited to embark on this journey with you and help you unlock your full potential. Start organizing your life today!
+			</p>
+			<a href="{% url 'Notes:Register' %}" class="btn btn-md text-center">SIGN UP</a>
+		</div>
+	</div>
+</div>  
+
+<section style="background: bisque;"id="about">
+	<div class="container">
+		<h1 class="text-center mt-5 pt-5" style="color: rgb(200, 77, 77);">About Page</h1>
+		<hr />
+		</div>
+		<div class="text-center mt-3">
+			<h2 class="Display-1">Welcome to JuST NoTE!!</h4>
+
+				<p>At Just Note, we believe in organizing your thoughts, ideas, and inspiration effortlessly. <br> Our website is designed to provide you with a simple and intuitive platform to capture and store all your important notes</p>
+		</div>
+			<div class="row">
+				<div class="col-sm-6">
+				  <div class="card m-5">
+					<div class="card-body ">
+					  <h3 class="card-title" style="color: rgb(200, 77, 77);">Creat your Notes ?</h5>
+					  <p class="card-text" style="font-weight: bold; ">Our user-friendly interface makes it easy to add, edit, and manage your notes with just a few clicks. No more wasting time searching through countless pages or sticky notes!</p>
+					  <a href="{% url 'Notes:login' %}" class="btn"style="background: red ;color:azure">Login here</a>
+					</div>
+				  </div>
+				</div>
+				<div class="col-sm-6">
+				  <div class="card m-5">
+					<div class="card-body">
+					  <h3 class="card-title"style="color: rgb(200, 77, 77);">New to here ? </h5>
+					  <p class="card-text" style="font-weight: bold; ">So, what are you waiting for? Sign up today and unlock the full potential of your note-taking experience. Welcome to "JuST NoTE" where note-taking becomes a breeze.</p>
+					  <a href="{% url 'Notes:Register' %}" class="btn" style="background: red ;color:azure">Sign Up</a>
+					</div>				  
+				</div>
+				</div>
+			  </div>
+</section>
+
+{% endblock body %}
+
+
+
+
+
+
+
+
+
+
+

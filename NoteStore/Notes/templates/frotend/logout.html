@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<div class="jumbotron text-center"style="height:100vh;">
+    <h1 class="display-4">Thank You !!!</h1>
+    <p class="lead">Thank you for choosing our website! We are delighted to have you as a valued user.</p>
+    <hr class="my-4">
+    <p>We appreciate your trust in our platform and look forward to helping you achieve your note-taking goals. Happy note-taking!</p>
+    <p class="lead">
+      <a class="btn  btn-lg" style="background:black;color:white"href="{% url 'Notes:login' %}" role="button">Login Again</a>
+      <a class="btn  btn-lg" style="background:black;color:white"href="{% url 'Notes:index' %}" role="button">Home</a>
+
+    </p>
+  </div>
+
+
+
+
+
+{% endblock body %}

@@ -1,0 +1,58 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2438/2438239.png">
+    <link rel="stylesheet" href="{% static 'AllCss/login.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(165, 144, 123);
+        }
+        #img{
+            border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        }
+</style>
+</head>
+<body>
+<section class="Form my-4 mx-5">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-lg-5 p-4" style="background: whitesmoke;">
+                <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=100" alt="" id="img"class="img-fluid">
+            </div>
+            <div class="col-lg-7 px-5">
+                <h1 class="font-weight-bold py-3">JuST NoTE!!</h1>
+                <h4>Create your account</h4>
+                
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{form |crispy }}
+                    <div class="form-row">
+                        <div class="col-lg-7">
+                            <button  type="submit" class="btn1">Sign Up</button>
+                        </div>
+                    </div>
+                    <p class="m-3">Don't you want to Login?  <a href="{% url 'Notes:login' %}">Login here</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+</body>
+</html>
