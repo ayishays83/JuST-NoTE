@@ -1,3 +1,6 @@
+#Dem-Vedio
+[Click to view Demo](https://clipchamp.com/watch/9JDKI36AJwe)
+
 # Note-App
 The "JuST NoTE "Web Application is built using Python-Django as the backend framework and utilizes CSS, HTML, and JavaScript for the frontend. This application allows users to create, view, and delete notes securely.
 
